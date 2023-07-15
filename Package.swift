@@ -3,7 +3,7 @@
 import PackageDescription
 
 var dependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.7.2"),
+    .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.7.1"),
     .package(url: "https://github.com/portto/secp256k1.git", from: "0.0.5")
 ]
 
@@ -18,7 +18,7 @@ var dependencies: [Package.Dependency] = [
 #endif
 
 let package = Package(
-    name: "secp256k1Swift",
+    name: "secp256k1SwiftLib",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -27,7 +27,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "secp256k1Swift",
+            name: "secp256k1SwiftLib",
             targets: [
                 "secp256k1Swift"
             ]

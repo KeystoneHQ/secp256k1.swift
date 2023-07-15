@@ -1,22 +1,20 @@
 Pod::Spec.new do |s|
-  s.name             = 'secp256k1Swift'
-  s.version          = '0.7.4'
+  s.name             = 'secp256k1SwiftLib'
+  s.version          = '0.8.0'
   s.summary          = 'elliptic curve public key cryptography, ECDSA, Schnorr Signatures for Bitcoin and C bindings from libsecp256k1.'
 
-  s.homepage         = 'https://github.com/portto/secp256k1.swift'
+  s.homepage         = 'https://github.com/KeystoneHQ/secp256k1.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'csjones' => '' }
+  s.author       = "Keystone"
   s.source           = {
-    :git => 'https://github.com/portto/secp256k1.swift.git',
+    :git => 'https://github.com/KeystoneHQ/secp256k1.swift.git',
     :tag => s.version.to_s,
     :submodules => true
   }
-  s.social_media_url = 'https://twitter.com/BloctoApp'
+  s.social_media_url = 'https://twitter.com/KeystoneWallet'
   s.swift_version = '5.0'
   s.ios.deployment_target = '13.0'
   s.osx.deployment_target = '10.15'
-  s.tvos.deployment_target = '13.0'
-  s.watchos.deployment_target = '6.0'
 
   s.source_files =
     'Sources/secp256k1Swift/Asymmetric.swift',
@@ -41,7 +39,7 @@ Pod::Spec.new do |s|
     'Sources/secp256k1Swift/Utility.swift',
     'Sources/secp256k1Swift/Zeroization.swift'
   s.dependency 'secp256k1Wrapper', '~> 0.0.5'
-  s.dependency 'CryptoSwift', '~> 1.7.2'
+  s.dependency 'CryptoSwift', '~> 1.7.1'
 
 end
 
