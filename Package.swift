@@ -29,14 +29,14 @@ let package = Package(
         .library(
             name: "secp256k1SwiftLib",
             targets: [
-                "secp256k1Swift"
+                "secp256k1SwiftLib"
             ]
         )
     ],
     dependencies: dependencies,
     targets: [
         .target(
-            name: "secp256k1Swift",
+            name: "secp256k1SwiftLib",
             dependencies: [
                 "CryptoSwift",
                 .product(name: "secp256k1Wrapper", package: "secp256k1")
@@ -123,7 +123,7 @@ let package = Package(
         .testTarget(
             name: "secp256k1Tests",
             dependencies: [
-                "secp256k1Swift"
+                "secp256k1SwiftLib"
             ]
         )
     ],
